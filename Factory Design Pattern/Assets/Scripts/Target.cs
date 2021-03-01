@@ -57,7 +57,7 @@ public class Target : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if(gameManager.isGameActive)
+        /*if(gameManager.isGameActive)
         {
             //gameManager.UpdateScore(pointValue);
 
@@ -66,17 +66,17 @@ public class Target : MonoBehaviour
             //Check if has pointSpawn related script and if so, call its 'Die' method
 
             Destroy(gameObject);
-        }
+        }*/
         
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!gameObject.CompareTag("Bad"))
+        /*if (!gameObject.CompareTag("Bad"))
         {
             gameManager.GameOver();
         }
-        Destroy(gameObject);
+        Destroy(gameObject);*/
     }
 
     // Update is called once per frame

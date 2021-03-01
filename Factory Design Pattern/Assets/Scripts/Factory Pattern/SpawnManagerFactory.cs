@@ -19,7 +19,7 @@ public class SpawnManagerFactory : MonoBehaviour
         {
             spawnToCreate = LowPointPrefab;
 
-            //If there is not already a Zombie script attached to the prefab, attach one
+            //If there is not already a  script attached to the prefab, attach one
             if (spawnToCreate.GetComponent<LowPointSpawn>() == null)
             {
                 spawnToCreate.AddComponent<LowPointSpawn>();

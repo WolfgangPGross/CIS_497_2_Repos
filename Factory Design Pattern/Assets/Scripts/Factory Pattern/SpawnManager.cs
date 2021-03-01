@@ -17,13 +17,28 @@ public class SpawnManager : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetKey(KeyCode.Space))
         {
-            if(cooledDown == true)
+           
+            if (cooledDown == true)
             {
+                Debug.Log("Got to spawning");
+                StartCoroutine(SpawnTarget());
+
                 cooledDown = false;
-                SpawnTarget();
             }
+        }
+        if (Input.GetKey(KeyCode.B))
+        {
+            SpawnObject("Low");
+        }
+        if (Input.GetKey(KeyCode.N))
+        { 
+            SpawnObject("Mid");
+        }
+        if (Input.GetKey(KeyCode.M))
+        {
+            SpawnObject("High");
         }
     }
 
@@ -41,29 +56,29 @@ public class SpawnManager : MonoBehaviour
 
     IEnumerator SpawnTarget()
     {
+        Debug.Log("Got to SpawnTarget begin");
         //Wait 1.5 second
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(0.25f);
 
         //Pick a random index between 0 and number of prefabs
         int index = Random.Range(0, 3);
 
         if(index == 0)
         {
-            string tempSpawn = "Low";
+            tempSpawn = "Low";
         }
         else if (index == 1)
         {
-            string tempSpawn = "Mid";
+            tempSpawn = "Mid";
         }
         if (index == 2)
         {
-            string tempSpawn = "High";
+            tempSpawn = "High";
         }
+        Debug.Log("Type: " + tempSpawn);
 
         SpawnObject(tempSpawn);
+        Debug.Log("Got to SpawnTarget End");
 
-        tempSpawn = "";
     }
-}
-
 }
