@@ -1,0 +1,5 @@
+sceneSetups:
+- path: Assets/Week05_Simple_Factory/5.3. Simple Factory Pattern with GameObjects.unity
+  isLoaded: 1
+  isActive: 1
+  isSubScene: 0
