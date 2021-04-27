@@ -1,4 +1,0 @@
-sceneSetups:
-- path: Assets/_/Stuff/Videos/Inventory/GameScene_Inventory.unity
-  isLoaded: 1
-  isActive: 1
